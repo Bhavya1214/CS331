@@ -14,11 +14,34 @@ Objective:
 Functional Requirements:
 1.  Automatically fetch incoming emails from a configured email server.
 2.  Analyse the subject and body of each email.
-3.  Classify emails using predefined keyword-based rules.
-4.  Generate automated responses for known categories.
-5.  Store logs of received emails and actions taken.
+3.  Classify emails using ML-based classification.
+4.  Assign a priority level (High, Medium, Low) based on urgency, keywords, and sentiment analysis.
+5.  Generate context-aware automated responses using ML/NLP techniques.
 6.  Allow administrators to add or modify classification rules.
+7.  Provide an admin dashboard to monitor email statistics, model performance, and system logs.
 
 Non-Functional Requirements:
 1.	Process an email as fast as possible.
 2.	Ensure confidentiality of email data.
+3.	Reliability, Scalability, Usability.
+
+Use case Domain:
+1.  Receive Email.
+2.  Analyse Email.
+3.  Classify Email.
+4.  Assign Priority.
+5.  Generate Response.
+6.  Escalate to Human.
+
+Assumptions and Dependencies:
+1. Availability of labeled training data.
+2. Stable email server access.
+3. ML model retraining depends on data quality.
+
+Operating Requirements:
+1. Server OS: Linux / Windows
+2. Programming Language: Python
+3. ML Libraries: TensorFlow / PyTorch / Scikit-learn
+4. Database: MySQL
+5. Email Protocols: IMAP, SMTP
+
