@@ -56,7 +56,7 @@ Objective:
      
    The system shall allow the admin to view reports such as number of emails processed, categories, and response status.
 
-3. Non-Functional Requirements
+2. Non-Functional Requirements
    
    Non-functional requirements describe how well the system performs.
 
@@ -90,7 +90,7 @@ Objective:
 
 
    
-5. Hardware Requirements
+3. Hardware Requirements
 
     Component	                 Requirement
 
@@ -105,7 +105,7 @@ Objective:
    System	                -   Desktop / Laptop
 
    
-7. Software Requirements
+4. Software Requirements
 
     Software	                Requirement
 
@@ -126,7 +126,7 @@ Objective:
    IDE	                    VS Code / PyCharm
 
    
-9. User Requirements
+5. User Requirements
 
     End User
 
@@ -137,7 +137,7 @@ Objective:
       Should be able to manage templates, train models, and view system reports.
 
    
-11. Constraints
+6. Constraints
   
    Requires internet connectivity
    
@@ -146,7 +146,7 @@ Objective:
    Accuracy depends on training data quality
 
 
-12. Assumptions
+7. Assumptions
   
    Emails are in English
    
