@@ -9,7 +9,7 @@ Objective:
 3.	To classify emails such as inquiry, complaint, request, or spam.
 4.	To assign priority levels based on keywords and sender type.
 5.	To generate predefined automated replies.
-6.	To maintain logs of all processed emails.
+6.	To maintain logs of all processed emails..
 
 Functional Requirements:
 1.  Automatically fetch incoming emails from a configured email server.
