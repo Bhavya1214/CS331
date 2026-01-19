@@ -1,15 +1,15 @@
                 Intelligent Email Processing and Response Automation   
  
 Goal:
-Start to design and develop a rule-based intelligent email processing system, then, if possible, develop an ML /Deep Learning based processing system that automatically reads incoming emails, classifies them using predefined rules and keywords, assigns priority levels, and sends appropriate automated responses.
+Start to design and develop a Machine Learning model that automatically analyzes incoming emails, classifies them into predefined categories, determines priority levels, and generates appropriate responses or escalates them to human operators.
 
 Objective:
 1.	To automatically retrieve emails from a configured mailbox.
-2.	To analyse email subject and body using predefined rules.
+2.	Use ML-based Natural Language Processing (NLP) techniques to understand email content
 3.	To classify emails such as inquiry, complaint, request, or spam.
-4.	To assign priority levels based on keywords and sender type.
-5.	To generate predefined automated replies.
-6.	To maintain logs of all processed emails.
+4.	To assign priority levels based on urgency.
+5.	Generate intelligent responses or forward emails when automation is not confident
+6.	To maintain logs of all processed emails for administrative monitoring.
 
 Functional Requirements:
 1.  Automatically fetch incoming emails from a configured email server.
