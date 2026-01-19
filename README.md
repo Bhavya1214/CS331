@@ -16,5 +16,9 @@ Functional Requirements:
 2.  Analyse the subject and body of each email.
 3.  Classify emails using predefined keyword-based rules.
 4.  Generate automated responses for known categories.
-x
+5.  Store logs of received emails and actions taken.
+6.  Allow administrators to add or modify classification rules.
+
+Non-Functional Requirements:
+1.	Process an email as fast as possible.
 2.	Ensure confidentiality of email data.
