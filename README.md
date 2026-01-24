@@ -1,47 +1,62 @@
                 Intelligent Email Processing and Response Automation   
  
-Goal:
-Start to design and develop a Machine Learning model that automatically analyzes incoming emails, classifies them into predefined categories, determines priority levels, and generates appropriate responses or escalates them to human operators.
+Goal:<br>
+Start to design and develop a rule-based intelligent email processing system, then, if possible, develop an ML /Deep Learning based processing system that automatically reads incoming emails, classifies them using predefined rules and keywords, assigns priority levels, and sends appropriate automated responses.<br>
 
 Objective:
 1.	To automatically retrieve emails from a configured mailbox.
-2.	Use ML-based Natural Language Processing (NLP) techniques to understand email content
+2.	To analyse email subject and body using predefined rules.
 3.	To classify emails such as inquiry, complaint, request, or spam.
-4.	To assign priority levels based on urgency.
-5.	Generate intelligent responses or forward emails when automation is not confident
-6.	To maintain logs of all processed emails for administrative monitoring.
+4.	To assign priority levels based on keywords and sender type.
+5.	To generate predefined automated replies.
+6.	To maintain logs of all processed emails.<br>
 
-Functional Requirements:
-1.  Automatically fetch incoming emails from a configured email server.
-2.  Analyse the subject and body of each email.
-3.  Classify emails using ML-based classification.
-4.  Assign a priority level (High, Medium, Low) based on urgency, keywords, and sentiment analysis.
-5.  Generate context-aware automated responses using ML/NLP techniques.
-6.  Allow administrators to add or modify classification rules.
-7.  Provide an admin dashboard to monitor email statistics, model performance, and system logs.
+Functional Requirements:<br>
+1.  Automatically receive incoming emails from an email server.<br>
+2.  Clean and preprocess the email content by removing unwanted characters, stopwords, and formatting.<br>
+3.  Classify emails such as inquiry, complaint, request, feedback, or spam.
+4.  Detect the intent of the email based on its content.
+5.  Generate an appropriate response using predefined templates or intelligent logic.
+6.  Send an automated reply to the sender based on the identified intent.
+7.  Forward emails to an administrator when the email is critical or cannot be handled automatically.
+8.  Allow the admin to create, update, and delete email response templates.
+9.  Allow the admin to train or update the classification model using new data.
+10. Allow the admin to view reports such as the number of emails processed, categories, and response status.
 
-Non-Functional Requirements:
-1.	Process an email as fast as possible.
-2.	Ensure confidentiality of email data.
-3.	Reliability, Scalability, Usability.
+Non-Functional Requirements:<br>
+1. Process and respond to emails within a short time.
+2. Handle a large number of emails without performance degradation.
+3. Provide accurate email classification and intent detection.
+4. Work continuously without failure and ensure email delivery.
+5. Securely access email accounts and protect user data.
+6. Provide a simple and user-friendly admin interface.
+7. Should be easy to update and maintain.
 
-Use case Domain:
-1.  Receive Email.
-2.  Analyse Email.
-3.  Classify Email.
-4.  Assign Priority.
-5.  Generate Response.
-6.  Escalate to Human.
+Hardware Requirements:<br>
+   Processor	           -         Intel Core i3 or higher <br>
+   RAM	                 -         Minimum 4 GB<br>
+   Hard Disk	           -         50 GB free space<br>
+   Network	             -         Internet connection<br>
+   System	               -         Desktop / Laptop<br>
 
-Assumptions and Dependencies:
-1. Availability of labeled training data.
-2. Stable email server access.
-3. ML model retraining depends on data quality.
+Software Requirements:<br>
+   Operating System	         -     Windows / Linux<br>
+   Programming Language	     -     Python<br>
+   Email Protocols	         -     IMAP, SMTP<br>
+   NLP Libraries	           -     NLTK / spaCy<br>
+   Machine Learning	         -     Scikit-learn<br>
+   Database	                 -     MySQL<br>
 
-Operating Requirements:
-1. Server OS: Linux / Windows
-2. Programming Language: Python
-3. ML Libraries: TensorFlow / PyTorch / Scikit-learn
-4. Database: MySQL
-5. Email Protocols: IMAP, SMTP
+User Requirements:<br>
+   Should be able to send emails and receive automated responses.<br>
+   Should be able to manage templates, train models, and view system reports.<br>
 
+Constraints:<br>
+   Requires internet connectivity.<br>
+   Depends on the availability of the email server.<br>
+   Accuracy depends on training data quality.<br>
+
+Assumptions:<br>
+   Emails are in English.<br>
+   Users provide meaningful email content.<br>
+   Admin regularly updates templates and models.<br>
