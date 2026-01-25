@@ -48,16 +48,3 @@ Software Requirements:<br>
    Database	                 -     MySQL<br>
 
 
-User Requirements:<br>
-   Should be able to send emails and receive automated responses.<br>
-   Should be able to manage templates, train models, and view system reports.<br>
-
-Constraints:<br>
-   Requires internet connectivity.<br>
-   Depends on the availability of the email server.<br>
-   Accuracy depends on training data quality.<br>
-
-Assumptions:<br>
-   Emails are in English.<br>
-   Users provide meaningful email content.<br>
-   Admin regularly updates templates and models.<br>
