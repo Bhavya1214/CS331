@@ -32,20 +32,6 @@ Non-Functional Requirements:<br>
 6. Provide a simple and user-friendly admin interface.
 7. Should be easy to update and maintain.
 
-Hardware Requirements:<br>
-   Processor	           -         Intel Core i3 or higher <br>
-   RAM	                 -         Minimum 4 GB<br>
-   Hard Disk	           -         50 GB free space<br>
-   Network	             -         Internet connection<br>
-   System	               -         Desktop / Laptop<br>
-
-Software Requirements:<br>
-   Operating System	         -     Windows / Linux<br>
-   Programming Language	     -     Python<br>
-   Email Protocols	         -     IMAP, SMTP<br>
-   NLP Libraries	           -     NLTK / spaCy<br>
-   Machine Learning	         -     Scikit-learn<br>
-   Database	                 -     MySQL<br>
 
 User Requirements:<br>
    Should be able to send emails and receive automated responses.<br>
