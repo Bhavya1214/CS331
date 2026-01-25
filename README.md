@@ -1,7 +1,6 @@
                 Intelligent Email Processing and Response Automation   
  
-Goal:<br>
-Start to design and develop a rule-based intelligent email processing system, then, if possible, develop an ML /Deep Learning based processing system that automatically reads incoming emails, classifies them using predefined rules and keywords, assigns priority levels, and sends appropriate automated responses.<br>
+em using predefined rules and keywords, assigns priority levels, and sends appropriate automated responses.<br>
 
 Objective:
 1.	To automatically retrieve emails from a configured mailbox.
