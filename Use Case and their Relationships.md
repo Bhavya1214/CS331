@@ -1,31 +1,76 @@
 CORE EMAIL PROCESSING USE CASES
 
-Receive Email - The system receives incoming emails from the email server.<br>
-Pre-process Email Content – Clean and prepare email data (remove noise, formatting, stopwords).<br>
-Analyse Email Content – Understand the subject and body of the email.<br>
-Detect Email Content – Identify keywords, intent, and patterns.<br>
-Classify Emails – Categorize emails (inquiry, complaint, request, spam, etc.).<br>
-Assign Priority – Assign High/Medium/Low priority based on urgency.<br>
-Detect Spam – Identify spam emails.<br>
-Block Malicious Emails – Prevent harmful or suspicious emails.<br>
-Generate Automated Response – Create predefined or intelligent responses.<br>
-Send Automated Reply – Send a reply to the email sender.<br>
+1. Receive Email:<br> 
+   The system receives incoming emails from the email server.<br>
+2. Pre-process Email Content:<br> 
+   Clean and prepare email data (remove noise, formatting, stopwords).<br>
+3. Analyse Email Content:<br> 
+   Understand the subject and body of the email.<br>
+4. Detect Email Content:<br> 
+   Identify keywords, intent, and patterns.<br>
+5. Classify Emails:<br> 
+   Categorize emails (inquiry, complaint, request, spam, etc.).<br>
+6. Assign Priority:<br>
+   Assign high, medium, or low priority based on urgency.<br>
+7. Detect Spam:<br>
+   Identify spam emails.<br>
+8. Block Malicious Emails:<br>
+   Prevent harmful or suspicious emails.<br>
+9. Generate Automated Response:<br>
+   Create predefined or intelligent responses.<br>
+10. Send Automated Reply:<br>
+    Send a reply to the email sender.<br>
 
 EXCEPTION AND ERROR HANDLING USE CASES
 
-Handle Email Fetch Failure – Manage failure while fetching emails.<br>
-Retry Email Delivery – Retry sending the email if delivery fails.<br>
-Forward Email to Admin – Escalate unhandled or critical emails.<br>
-Notify Admin on System Error – Inform the admin when system errors occur.<br>
+1. Handle Email Fetch Failure:<br>
+   Manage failure while fetching emails.<br>
+2. Retry Email Delivery:<br>
+   Retry sending the email if delivery fails.<br>
+3. Forward Email to Admin:<br>
+   Escalate unhandled or critical emails.<br>
+4. Notify Admin on System Error:<br>
+   Inform the admin when system errors occur.<br>
 
 ADMINISTRATIVE AND MANAGEMENT USE CASES
 
-Manage Responses – Create/update automated response templates.<br>
-Update Classification Rules – Modify rule-based email classification.<br>
-Train / Update ML Model – Train or improve ML-based classifier.<br>
-View System Reports – View logs, analytics, and processing reports.<br>
-Review Escalated Reports – Review emails forwarded to admin.<br>
-Configure Email Server – Configure IMAP/SMTP settings.<br>
-Secure Email Access – Ensure secure access to the email server.<br>
-Log Email Activity – Maintain logs of all email operations.<br>
+1. Manage Responses:<br>
+   Create/update automated response templates.<br>
+2. Update Classification Rules:<br>
+   Modify rule-based email classification.<br>
+3. Train / Update ML Model:<br>
+   Train or improve ML-based classifier.<br>
+4. View System Reports:<br>
+   View logs, analytics, and processing reports.<br>
+5. Review Escalated Reports:<br>
+   Review emails forwarded to the admin.<br>
+6. Configure Email Server:<br>
+   Configure IMAP/SMTP settings.<br>
+7. Secure Email Access:<br>
+   Ensure secure access to the email server.<br>
+8. Log Email Activity:<br>
+   Maintain logs of all email operations.<br
+
+ACTOR <---> USE CASE RELATIONSHIPS (Associations)
+
+USER (Email Sender)
+1. Receive Emails
+2. Send Automated Reply (receives reply from system)
+
+ADMIN
+1. Manage Responses
+2. Update Classification Rules
+3. Train / Update ML Model
+4. View System Reports
+5. Review Escalated Reports
+6. Configure Email Server
+7. Secure Email Access
+8. Notify Admin on System Error
+
+EMAIL SERVER(IMAP/SMTP)
+1. Send Automated Reply
+2. Retry Email Delivery
+3. Handle Email Fetch Failure
+4. Receive Emails
+
 
