@@ -75,6 +75,7 @@ EMAIL SERVER(IMAP/SMTP)
 
 USE CASE <---> USE CASE RELATIONSHIPS<br>
 
+
 1. Analyse Email Content       << include >>       Pre-process Email Content.<br>
 2. Analyse Email Content       << include >>       Detect Email Content.<br>
 3. Analyse Email Content       << include >>       Classify Emails.<br>
@@ -82,6 +83,11 @@ USE CASE <---> USE CASE RELATIONSHIPS<br>
 5. Classify Emails             << include >>       Detect Spam.<br>
 6. Generate Automated Response << include >>       Send Automated Reply.<br>
 7. Send Automated Reply        << include >>       Log Email Activity.<br>
+8. Handle Email Fetch Failure  << extend  >>       Receive Emails
+9. Forward Email to Admin      << extend  >>       Analyse Email Content
+10. Block Malicious Emails     << extend  >>       Detect Spam
+11. Retry Email Delivery       << extend  >>       Send Automated Reply
+12. Notify Admin on Error      << extend  >>       Handle Email Fetch Failure
 
 
 
