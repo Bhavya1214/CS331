@@ -75,6 +75,10 @@ EMAIL SERVER(IMAP/SMTP)
 
 USE CASE <---> USE CASE RELATIONSHIPS<br>
 
+<< include >> Relationships:<br>
+Always executed as part of another use case.<br>
+<< extend >> Relationships:<br>
+Optional/conditional execution.
 
 1. Analyse Email Content       << include >>       Pre-process Email Content.<br>
 2. Analyse Email Content       << include >>       Detect Email Content.<br>
