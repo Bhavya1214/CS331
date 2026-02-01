@@ -1,1 +1,172 @@
+Intelligent Email Processing & Response Automation System
+UML Use Case Diagram – Explanation
 
+
+System Boundary
+
+The large rectangle in the UML diagram represents the System Boundary, labeled as:
+
+“Intelligent Email Processing & Response Automation System”
+
+All functionalities inside the boundary are performed by the system.
+
+All entities outside the boundary are external actors interacting with the system.
+
+Actors (External Entities)
+1. User (Mail Sender)
+
+The User represents the person who sends emails to the system.
+
+Responsibilities:
+
+Sends emails to the system
+
+Reviews auto-generated email drafts
+
+Sends replies manually if automation fails or requires confirmation
+
+2. Email Server (IMAP/SMTP)
+
+The Email Server is an external service responsible for email communication.
+
+Responsibilities:
+
+Provides incoming emails using IMAP
+
+Sends outgoing emails using SMTP
+
+Assists in managing responses and drafts
+
+Main Use Cases
+Receive Emails
+
+The system receives emails from the Email Server
+
+This is the starting point of the entire workflow
+
+Analyze Emails
+
+The system examines incoming emails
+
+Triggered immediately after emails are received
+
+Helps identify intent, priority, and overall purpose of the email
+
+Analyze Email Content (<<include>>)
+
+A mandatory sub-process
+
+Used by:
+
+Analyze Emails
+
+Classify Emails
+
+Extracts keywords, intent, urgency, and context
+
+Note:
+<<include>> indicates that this functionality always occurs as part of the parent use case.
+
+Classify Emails
+
+Categorizes emails into types such as:
+
+Complaint
+
+Query
+
+Request
+
+Spam
+
+Depends on analyzed email content
+
+Determines the type of response required
+
+Generate Automated Response
+
+Automatically creates a reply based on email classification
+
+Uses predefined templates or AI-based logic
+
+Send Automated Reply
+
+Sends the generated response automatically to the sender
+
+Represents the ideal and successful execution path
+
+Review and Fallback Scenarios (<<extend>>)
+Review Auto-Draft
+
+Activated when:
+
+Automation confidence is low
+
+The system is unsure of the response
+
+Allows the user to review and edit the draft before sending
+
+Send Draft (<<extend>>)
+
+Executed only if automation fails
+
+User manually sends the reviewed draft
+
+Note:
+<<extend>> indicates an optional or conditional flow that occurs only under specific circumstances.
+
+Administrative and Management Use Cases
+Manage Responses
+
+Manages:
+
+Sent automated replies
+
+Failed automation cases
+
+Draft handling and tracking
+
+Update Classification Rules
+
+Improves accuracy of email classification
+
+Learns from previous responses and user corrections
+
+Configure Email Server
+
+Configures IMAP and SMTP settings
+
+Required for seamless email communication
+
+Relationship Summary
+<<include>>
+
+Represents mandatory functionality
+
+Example:
+
+Analyze Emails → Analyze Email Content
+
+<<extend>>
+
+Represents optional or conditional behavior
+
+Example:
+
+Send Draft → Executed if automation fails
+
+Overall Workflow (Simplified)
+
+Email is received from the Email Server
+
+Email content is analyzed
+
+Email is classified
+
+Automated response is generated
+
+System sends reply automatically
+
+If automation fails, the user reviews and sends a draft
+
+System improves classification rules over time
