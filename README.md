@@ -57,4 +57,9 @@ Constraints:<br>
    Depends on the availability of the email server.<br>
    Accuracy depends on training data quality.<br>
 
+   
+Assumptions:<br>
+   Emails are in English.<br>
+   Users provide meaningful email content.<br>
+   Admin regularly updates templates and models.<br>
 
