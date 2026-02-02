@@ -12,6 +12,16 @@ Objective:
 6.	To maintain logs of all processed emails.<br>
 
 Functional Requirements:<br>
+1.  Automatically receive incoming emails from an email server.<br>
+2.  Clean and preprocess the email content by removing unwanted characters, stopwords, and formatting.<br>
+3.  Classify emails such as inquiry, complaint, request, feedback, or spam.
+4.  Detect the intent of the email based on its content.
+5.  Generate an appropriate response using predefined templates or intelligent logic.
+6.  Send an automated reply to the sender based on the identified intent.
+7.  Forward emails to an administrator when the email is critical or cannot be handled automatically.
+8.  Allow the admin to create, update, and delete email response templates.
+9.  Allow the admin to train or update the classification model using new data.
+10. Allow the admin to view reports such as the number of emails processed, categories, and response status.
 
 
 Non-Functional Requirements:<br>
