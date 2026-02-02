@@ -30,8 +30,7 @@ Non-Functional Requirements:<br>
 3. Provide accurate email classification and intent detection.
 4. Work continuously without failure and ensure email delivery.
 5. Securely access email accounts and protect user data.
-6. Provide a simple and user-friendly admin interface.
-7. Should be easy to update and maintain.
+
 
 Hardware Requirements:<br>
    Processor	           -         Intel Core i3 or higher <br>
