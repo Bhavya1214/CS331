@@ -40,21 +40,25 @@ Hardware Requirements:<br>
    Hard Disk	           -         50 GB free space<br>
    Network	             -         Internet connection<br>
    System	               -         Desktop / Laptop<br>
+   NLP Libraries	           -     NLTK / spaCy<br>
+   Machine Learning	         -     Scikit-learn<br>
+   Database	                 -     MySQL<br>
 
 Software Requirements:<br>
    Operating System	         -     Windows / Linux<br>
    Programming Language	     -     Python<br>
    Email Protocols	         -     IMAP, SMTP<br>
- 
 
+  Constraints:<br>
+   Requires internet connectivity.<br>
+   Depends on the availability of the email server.<br>
+   Accuracy depends on training data quality.<br>
 
 User Requirements:<br>
    Should be able to send emails and receive automated responses.<br>
    Should be able to manage templates, train models, and view system reports.<br>
 
 
-
-   
 Assumptions:<br>
    Emails are in English.<br>
    Users provide meaningful email content.<br>
