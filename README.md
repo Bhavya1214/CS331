@@ -45,19 +45,14 @@ Software Requirements:<br>
    Operating System	         -     Windows / Linux<br>
    Programming Language	     -     Python<br>
    Email Protocols	         -     IMAP, SMTP<br>
-   NLP Libraries	           -     NLTK / spaCy<br>
-   Machine Learning	         -     Scikit-learn<br>
-   Database	                 -     MySQL<br>
+ 
 
 
 User Requirements:<br>
    Should be able to send emails and receive automated responses.<br>
    Should be able to manage templates, train models, and view system reports.<br>
 
-Constraints:<br>
-   Requires internet connectivity.<br>
-   Depends on the availability of the email server.<br>
-   Accuracy depends on training data quality.<br>
+
 
    
 Assumptions:<br>
