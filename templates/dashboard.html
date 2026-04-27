@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Automation Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <a href="/logout" class="btn btn-danger float-end">Logout</a>
+
+<div class="container mt-5">
+
+<h2>Email Processing Dashboard</h2>
+<hr>
+
+<!-- TOTAL EMAIL CARD -->
+<div class="row">
+<div class="col-md-4">
+<div class="card p-3 text-white" style="background: linear-gradient(45deg, #007bff, #00c6ff);">
+<h4>Total Emails</h4>
+<p id="total">Loading...</p>
+</div>
+</div>
+</div>
+
+<hr>
+
+<!-- INPUT -->
+<h4>Process New Email</h4>
+
+<div class="row">
+<div class="col-md-6">
+
+<input id="content" class="form-control mb-2" placeholder="Enter Email Content">
+
+<button onclick="processEmail()" class="btn btn-success">
+Process Email
+</button>
+
+<button onclick="fetchEmails()" class="btn btn-warning ms-2">
+Fetch Real Emails
+</button>
+
+</div>
+</div>
+
+<hr>
+
+<!-- RESULT -->
+<h4>System Result</h4>
+<pre id="result"></pre>
+
+<hr>
+
+<!-- BAR CHART -->
+<h4>Email Category Statistics (Bar Chart)</h4>
+<canvas id="emailChart" width="400" height="200"></canvas>
+
+<hr>
+
+<!-- PIE CHART -->
+<h4>Category Distribution (Pie Chart)</h4>
+<canvas id="pieChart" width="400" height="200"></canvas>
+
+</div>
+
+<script>
+
+let emailChart = null;
+let pieChart = null;
+
+// ================= PROCESS EMAIL =================
+function processEmail() {
+
+    const content = document.getElementById("content").value;
+
+    fetch("/process_email", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({content: content})
+    })
+    .then(res => res.json())
+    .then(data => {
+
+        document.getElementById("result").innerText =
+            JSON.stringify(data, null, 2);
+
+        document.getElementById("content").value = "";
+
+        loadStats();
+        loadChart();
+    });
+
+}
+
+
+// ================= FETCH REAL EMAILS =================
+function fetchEmails(){
+
+    fetch("/fetch_emails")
+    .then(res => res.json())
+    .then(data => {
+
+        document.getElementById("result").innerText =
+            JSON.stringify(data, null, 2);
+
+        loadStats();
+        loadChart();
+    });
+
+}
+
+
+// ================= LOAD TOTAL EMAILS =================
+function loadStats(){
+
+    fetch("/stats")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("total").innerText = data.total;
+    });
+
+}
+
+
+// ================= LOAD CHARTS =================
+function loadChart(){
+
+    fetch("/category_stats")
+    .then(res => res.json())
+    .then(data => {
+
+        const labels = Object.keys(data);
+        const values = Object.values(data);
+
+        // BAR CHART
+        const ctx = document.getElementById("emailChart").getContext("2d");
+
+        if(emailChart){
+            emailChart.destroy();
+        }
+
+        emailChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: labels.map((key, i) => key + " - " + values[i]),
+                datasets: [{
+                    label: "Emails by Category",
+                    data: values,
+                    backgroundColor: "rgba(54,162,235,0.6)"
+                }]
+            }
+        });
+
+        // PIE CHART
+        const pieCtx = document.getElementById("pieChart").getContext("2d");
+
+        if(pieChart){
+            pieChart.destroy();
+        }
+
+        pieChart = new Chart(pieCtx, {
+            type: "pie",
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: values
+                }]
+            }
+        });
+
+    });
+
+}
+
+
+// ================= INITIAL LOAD =================
+loadStats();
+loadChart();
+
+
+// ================= AUTO FETCH (REAL-TIME FEATURE) =================
+setInterval(() => {
+
+    fetch("/fetch_emails")
+    .then(res => res.json())
+    .then(data => {
+
+        console.log("Auto fetching emails...");
+
+        loadStats();
+        loadChart();
+
+    });
+
+}, 30000); // every 30 seconds
+
+</script>
+
+</body>
+</html>
